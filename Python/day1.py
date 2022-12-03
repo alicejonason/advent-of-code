@@ -2,18 +2,15 @@
 def calories(f):
     elf = 0
     calories = []
-    with open(f) as f_in:
-        lines = f_in.readlines()
-        for line in lines:
-            line = line.strip()
-            if line != '':
-                elf += int(line)
-                continue
-            else:
-                calories.append(elf)
-                elf = 0
-        return(calories)
-
+    lines = [lines.strip() for lines in open("aoc_1.txt")]
+    for line in lines:
+        if line != '':
+            elf += int(line)
+            continue
+        else:
+            calories.append(elf)
+            elf = 0
+    return(calories)
 print(max(calories("aoc_1.txt")))
 
 # Part 2
