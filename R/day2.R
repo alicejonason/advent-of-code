@@ -1,4 +1,4 @@
-aoc_2 <- read.table("~/Desktop/aoc_2.txt", blank.lines.skip = FALSE)
+aoc_2 <- read.table("~/Desktop/aoc_2.txt")
 aoc_2$V2 <- ifelse(aoc_2$V2 == "X", "A", ifelse(aoc_2$V2 == "Y", "B", "C"))
 
 rps <- function(input1, input2) {
